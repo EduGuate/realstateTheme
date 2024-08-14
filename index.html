@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RealEstate Hub - Encuentra tu Hogar Ideal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+      /* Global Styles */
+      body {
+        font-family: Arial, sans-serif;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      /* Navbar */
+      .navbar {
+        background-color: #f8f9fa;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Hero Section */
+      .hero-section {
+        background: url('/src/house8.webp') no-repeat center center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+        position: relative;
+      }
+
+      .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+      }
+
+      .hero-section .container {
+        position: relative;
+        z-index: 2;
+      }
+
+      .hero-section h1 {
+        font-size: 3rem;
+      }
+
+      .hero-section p {
+        font-size: 1.25rem;
+      }
+
+      /* About Us Section */
+      #about img {
+        max-width: 100%;
+        border-radius: 10px;
+      }
+
+      /* Property Cards */
+      .card {
+        border: none;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .card-img-top {
+        transition: transform 0.3s;
+      }
+
+      .card-img-top:hover {
+        transform: scale(1.05);
+      }
+
+      .card-title {
+        font-size: 1.25rem;
+        margin-top: 10px;
+      }
+
+      .card-text {
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      /* Services Section */
+      .services-icon {
+        font-size: 2rem;
+        color: #007bff;
+      }
+
+      /* Testimonials Section */
+      .testimonials {
+        background-color: #f8f9fa;
+        padding: 50px 0;
+      }
+
+      /* Footer */
+      footer {
+        background-color: #f8f9fa;
+        color: #333;
+        padding: 20px 0;
+        margin-top: 30px;
+      }
+
+      footer a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .hero-section h1 {
+          font-size: 2.5rem;
+        }
+        .hero-section p {
+          font-size: 1rem;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-section {
+          padding: 50px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">RealEstate Hub</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Sobre Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#properties">Propiedades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contacto</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <div class="container">
+        <h1>Tu Nuevo Hogar Te Espera</h1>
+        <p>Encuentra las mejores propiedades con nosotros</p>
+        <a href="#properties" class="btn btn-primary btn-lg mt-4">Explorar Propiedades</a>
+      </div>
+    </section>
+
+    <!-- About Us -->
+    <section id="about" class="container mt-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <h2>¿Quiénes Somos?</h2>
+          <p>En RealEstate Hub, nos dedicamos a conectar a las personas con sus futuros hogares. Con más de 10 años en el mercado inmobiliario, ofrecemos un servicio personalizado y una amplia gama de propiedades en venta y alquiler.</p>
+        </div>
+        <div class="col-lg-6">
+          <img src="/src/house1.webp" class="img-fluid" alt="Sobre Nosotros">
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section id="properties" class="container mt-5">
+      <h2 class="text-center">Propiedades Destacadas</h2>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <img src="/src/house2.webp" class="card-img-top" alt="Property 1">
+              <div class="card-body">
+                <h5 class="card-title">Luxury Villa</h5>
+                <p class="card-text">4 beds • 3 baths • 3500 sqft</p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-property-title="Luxury Villa" data-bs-property-img="/src/house2.webp" data-bs-property-details="4 beds • 3 baths • 3500 sqft">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-6">
+            <div class="card">
+              <img src="/src/house3.webp" class="card-img-top" alt="Property 2">
+              <div class="card-body">
+                <h5 class="card-title">Modern Apartment</h5>
+                <p class="card-text">2 beds • 2 baths • 1500 sqft</p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-property-title="Modern Apartment" data-bs-property-img="/src/house3.webp" data-bs-property-details="2 beds • 2 baths • 1500 sqft">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="/src/house4.webp" class="card-img-top" alt="Property 3">
+              <div class="card-body">
+                <h5 class="card-title">Cozy Cottage</h5>
+                <p class="card-text">3 beds • 2 baths • 2000 sqft</p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-property-title="Cozy Cottage" data-bs-property-img="/src/house4.webp" data-bs-property-details="3 beds • 2 baths • 2000 sqft">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col">
+            <div class="card">
+              <img src="/src/house5.webp" class="card-img-top" alt="Property 4">
+              <div class="card-body">
+                <h5 class="card-title">Charming Bungalow</h5>
+                <p class="card-text">2 beds • 1 bath • 1200 sqft</p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-property-title="Charming Bungalow" data-bs-property-img="/src/house5.webp" data-bs-property-details="2 beds • 1 bath • 1200 sqft">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-5">
+            <div class="card">
+              <img src="/src/house6.webp" class="card-img-top" alt="Property 5">
+              <div class="card-body">
+                <h5 class="card-title">Downtown Loft</h5>
+                <p class="card-text">1 bed • 1 bath • 900 sqft</p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-property-title="Downtown Loft" data-bs-property-img="/src/house6.webp" data-bs-property-details="1 bed • 1 bath • 900 sqft">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="/src/house7.webp" class="card-img-top" alt="Property 6">
+              <div class="card-body">
+                <h5 class="card-title">Beach House</h5>
+                <p class="card-text">3 beds • 2 baths • 2500 sqft</p>
+                <a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#propertyModal" data-bs-property-title="Beach House" data-bs-property-img="/src/house7.webp" data-bs-property-details="3 beds • 2 baths • 2500 sqft">Ver Detalles</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="container mt-5">
+      <h2 class="text-center">Nuestros Servicios</h2>
+      <div class="row mt-4">
+        <div class="col-lg-4 text-center">
+          <i class="bi bi-house-door services-icon"></i>
+          <h5 class="mt-3">Compra y Venta de Propiedades</h5>
+          <p>Te ayudamos a encontrar la propiedad perfecta o vender tu propiedad rápidamente.</p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <i class="bi bi-currency-dollar services-icon"></i>
+          <h5 class="mt-3">Asesoría Financiera</h5>
+          <p>Obtén consejos de expertos para financiar tu nuevo hogar.</p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <i class="bi bi-building services-icon"></i>
+          <h5 class="mt-3">Gestión de Alquileres</h5>
+          <p>Administramos tu propiedad y nos aseguramos de que esté en las mejores manos.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section id="testimonials" class="testimonials mt-5">
+      <div class="container">
+        <h2 class="text-center">Lo Que Dicen Nuestros Clientes</h2>
+        <div id="testimonialCarousel" class="carousel slide mt-4" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex justify-content-center">
+                <div class="col-lg-8">
+                  <div class="card">
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p>RealEstate Hub me ayudó a encontrar mi hogar ideal de manera rápida y fácil. El equipo es increíblemente profesional.</p>
+                        <footer class="blockquote-footer">Juan Pérez</footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex justify-content-center">
+                <div class="col-lg-8">
+                  <div class="card">
+                    <div class="card-body">
+                      <blockquote class="blockquote mb-0">
+                        <p>La mejor experiencia inmobiliaria que he tenido. Encontré justo lo que buscaba.</p>
+                        <footer class="blockquote-footer">María López</footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Puedes añadir más testimonios aquí -->
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Us -->
+    <section id="contact" class="container mt-5 mb-5">
+      <h2 class="text-center">¿Listo Para Encontrar Tu Hogar?</h2>
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <div class="card">
+            <div class="card-body">
+              <form action="YOUR_FORM_HANDLER_URL" method="POST">
+                <div class="mb-3">
+                  <label for="name" class="form-label">Nombre</label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Tu Nombre" required>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo Electrónico</label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                </div>
+                <div class="mb-3">
+                  <label for="message" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                </div>
+                <div class="d-flex justify-content-center">
+                  <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="propertyModal" tabindex="-1" aria-labelledby="propertyModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="propertyModalLabel">Detalles de la Propiedad</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="card">
+              <img src="" id="propertyModalImg" class="card-img-top" alt="Property Image">
+              <div class="card-body">
+                <h5 class="card-title" id="propertyModalTitle"></h5>
+                <p class="card-text" id="propertyModalDetails"></p>
+                <h6>Contacto:</h6>
+                <p>Nombre del Agente: Juan Pérez</p>
+                <p>Teléfono: +123 456 789</p>
+                <p>Email: juanperez@example.com</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-primary">Contactar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light text-center py-4">
+      <p>© 2024 RealEstate Hub. Todos los derechos reservados.</p>
+      <p>Síguenos en: 
+        <a href="#">Facebook</a> | 
+        <a href="#">Instagram</a> | 
+        <a href="#">Twitter</a> | 
+        <a href="#">LinkedIn</a>
+      </p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript para modal dinámico -->
+    <script>
+      const propertyModal = document.getElementById('propertyModal');
+      propertyModal.addEventListener('show.bs.modal', function (event) {
+        // Botón que activó el modal
+        const button = event.relatedTarget;
+        // Extrae la información de data-bs-* attributes
+        const title = button.getAttribute('data-bs-property-title');
+        const img = button.getAttribute('data-bs-property-img');
+        const details = button.getAttribute('data-bs-property-details');
+        
+        // Actualiza el contenido del modal
+        const modalTitle = propertyModal.querySelector('.modal-title');
+        const modalImg = propertyModal.querySelector('#propertyModalImg');
+        const modalDetails = propertyModal.querySelector('#propertyModalDetails');
+
+        modalTitle.textContent = title;
+        modalImg.src = img;
+        modalDetails.textContent = details;
+      });
+    </script>
+  </body>
+</html>
